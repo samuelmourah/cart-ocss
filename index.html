@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartão de Visita Interativo</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .card-container {
+        width: 300px;
+        height: 200px;
+        perspective: 1000px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+    }
+
+    .card-container:hover .card {
+        transform: rotateY(180deg);
+    }
+
+    .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .front {
+        background: linear-gradient(135deg, #f17909, #00b4d8);
+    }
+
+    .back {
+        background: linear-gradient(135deg, #f17909, #0077b6);
+        transform: rotateY(180deg);
+    }
+
+    h1 {
+        margin: 5px 0;
+        font-size: 22px;
+    }
+
+    p {
+        margin: 2px 0;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid white;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .social {
+        margin-top: 10px;
+    }
+
+    .social a {
+        margin: 0 5px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <!-- Frente do cartão -->
+        <div class="card-face front">
+            <!-- Foto -->
+            <img src="Imagem do WhatsApp de 2025-06-19 à(s) 19.19.55_71bb5bcc.jpg" alt="Foto de Perfil" class="profile-img">
+
+            <h1>Samuel Moura</h1>
+            <p>Téc em Análises Clínicas</p>
+            <p>Tel: (85) 98225-9323</p>
+            <p>Penedo - Maranguape - CE</p>
+        </div>
+
+        <!-- Verso do cartão -->
+        <div class="card-face back">
+            <h1>Redes Sociais</h1>
+            <div class="social">
+                <a href="https://github.com/samuelmourah" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="40px">
+                </a>
+                <a href="https://www.instagram.com/seuusuario" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40px">
+                </a>
+                <a href="https://wa.me/5585982259323" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40px">
+                </a>
+                <a href="mailto:samuelolliveira26122007@gmail.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" width="40px">
+                </a>
+            </div>
+
+            <footer>
+                <div class="social">
+                    <a href="https://github.com/samuelmourah" target="_blank">GitHub</a>
+                    <a href="https://www.instagram.com/seuusuario" target="_blank">Instagram</a>
+                    <a href="https://wa.me/5585982259323" target="_blank">WhatsApp</a>
+                    <a href="mailto:samuelolliveira26122007@gmail.com" target="_blank">E-mail</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
